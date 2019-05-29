@@ -49,7 +49,7 @@ let setServer = (server) => {
                 to: data.email, // list of receivers
                 subject: 'Welcome to Meeting Planner App', // Subject line
                 html: `Hi ${data.firstName} ${data.lastName},<br><br>
-                Welcome to the Meeting Planner App. It is used to plan a meeting with professionals at a particular date and time in many time zones.<br>Please Click <a href="http://meetingplanner.ml/activate?activateToken=${data.activateUserToken}" >here</a> to verify your email and continue with our sevices.<br><br> Warm Regards,<br>MeanStack Team` // html body
+                Welcome to the Meeting Planner App. It is used to plan a meeting with professionals at a particular date and time in many time zones.<br>Please Click <a href="https://www.meetingplanner.ml/activate?activateToken=${data.activateUserToken}" >here</a> to verify your email and continue with our sevices.<br><br> Warm Regards,<br>MeanStack Team` // html body
             };
             transporter.sendMail(mailOptions, (error, info) => {
                 if (error) {
@@ -84,7 +84,7 @@ let setServer = (server) => {
                 from: '"MeanStack" <Admin@MeanStack.com>', // sender address
                 to: data.email, // list of receivers
                 subject: 'Reset Password', // Subject line
-                html: `Hi,<br><br>If you are receiving this email, You have forgotten the password on Meeting Planner App.<br>To reset the password Click the <a href="http://meetingplanner.ml/reset?passwordToken=${data.resetPasswordToken}">link</a><br><b>The link will expire in 5 minutes</b><br><br>Warm Regards,<br>MeanStack Team` // html body
+                html: `Hi,<br><br>If you are receiving this email, You have forgotten the password on Meeting Planner App.<br>To reset the password Click the <a href="https://www.meetingplanner.ml/reset?passwordToken=${data.resetPasswordToken}">link</a><br><b>The link will expire in 5 minutes</b><br><br>Warm Regards,<br>MeanStack Team` // html body
             };
             transporter.sendMail(mailOptions, (error, info) => {
                 if (error) {
