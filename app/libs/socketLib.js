@@ -84,7 +84,7 @@ let setServer = (server) => {
                 from: '"MeanStack" <Admin@MeanStack.com>', // sender address
                 to: data.email, // list of receivers
                 subject: 'Reset Password', // Subject line
-                html: `Hi,<br><br>If you are receiving this email, You have forgotten the password on Meeting Planner App.<br>To reset the password Click the <a href="http://localhost:4200/reset?passwordToken=${data.resetPasswordToken}">link</a><br><b>The link will expire in 5 minutes</b><br><br>Warm Regards,<br>MeanStack Team` // html body
+                html: `Hi,<br><br>If you are receiving this email, You have forgotten the password on Meeting Planner App.<br>To reset the password Click the <a href="http://meetingplanner.ml/reset?passwordToken=${data.resetPasswordToken}">link</a><br><b>The link will expire in 5 minutes</b><br><br>Warm Regards,<br>MeanStack Team` // html body
             };
             transporter.sendMail(mailOptions, (error, info) => {
                 if (error) {
