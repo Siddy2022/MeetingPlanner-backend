@@ -51,7 +51,7 @@ let userSchema = new Schema({
     type : Boolean,
     default : false
   },
-  activateUserToken : String,
+  UserToken : String,
   resetPasswordToken : String,
   resetPasswordExpires : Date
   
