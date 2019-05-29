@@ -143,7 +143,7 @@ let activateUser = (req, res) => {
     }
     let activateUser = () => {
         return new Promise((resolve, reject) => {
-            UserModel.update({ activateUserToken: req.body.activateToken }, { $unset: { activateUserToken: 1 }, active: true }, (err, result) => {
+            UserModel.update({ activateUserToken: req.body.activateToken }, { $unset: { activateUserToken: 1 } }, (err, result) => {
                 if (err) {
                     console.log(err)
                     logger.error('Failed to Retrieve User Data', 'User Controller : activateUser', 5)
@@ -185,10 +185,6 @@ let loginFunction = (req, res) => {
                     } else if (check.isEmpty(userDetails)) {
                         logger.error('No User Found', 'User Controller : findUser', 5)
                         let apiResponse = response.generate(true, 'No User Details Found', 400, null)
-                        reject(apiResponse)
-                    } else if (userDetails.active == false) {
-                        logger.error('No User Found', 'User Controller : findUser', 5)
-                        let apiResponse = response.generate(true, 'Email is not verified', 400, null)
                         reject(apiResponse)
                     } else {
                         logger.info('User Found', 'User Controller : findUser', 5)
