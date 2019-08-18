@@ -3,5 +3,5 @@
     "version": "0.0.1",
     "description": "Documentation for the Meeting Planner App",
     "title": "Meeting Planner APIs",
-    "url":"http://localhost:3002"
+    "url":"http://localhost:3000"
   }
